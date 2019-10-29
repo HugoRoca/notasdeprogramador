@@ -1,6 +1,6 @@
 baseURL = "/"
 languageCode = "es-PE"
-defaultContentLanguage = "es"
+#defaultContentLanguage = "es"
 
 title = "Hugo Learn Documentation"
 theme = "hugo-theme-learn"
@@ -17,36 +17,35 @@ publishdir = "docs"
   description = "Documentation for Hugo Learn Theme"
   author = "Mathieu Cornic"
   showVisitedLinks = true
-  disableBreadcrumb = false
-  disableNextPrev = false
+  disableBreadcrumb = true
+  disableNextPrev = true
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
 
-[Languages]
-[Languages.es]
-title = "Documentation for Hugo Learn Theme"
-weight = 1
-languageName = "English"
+# [Languages]
+# [Languages.es]
+# title = "Documentation for Hugo Learn Theme"
+# weight = 1
 
-[[Languages.es.menu.shortcuts]]
-name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
-identifier = "ds"
-url = "https://github.com/matcornic/hugo-theme-learn"
-weight = 10
+# [[Languages.es.menu.shortcuts]]
+# name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+# identifier = "ds"
+# url = "https://github.com/matcornic/hugo-theme-learn"
+# weight = 10
 
-[[Languages.es.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-camera'></i> Showcases"
-url = "showcase"
-weight = 11
+# [[Languages.es.menu.shortcuts]]
+# name = "<i class='fas fa-fw fa-camera'></i> Showcases"
+# url = "showcase"
+# weight = 11
 
-[[Languages.es.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-bookmark'></i> Hugo Documentation"
-identifier = "hugodoc"
-url = "https://gohugo.io/"
-weight = 20
+# [[Languages.es.menu.shortcuts]]
+# name = "<i class='fas fa-fw fa-bookmark'></i> Hugo Documentation"
+# identifier = "hugodoc"
+# url = "https://gohugo.io/"
+# weight = 20
 
-[[Languages.es.menu.shortcuts]]
-name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
-url = "/credits"
-weight = 30
+# [[Languages.es.menu.shortcuts]]
+# name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
+# url = "/credits"
+# weight = 30
