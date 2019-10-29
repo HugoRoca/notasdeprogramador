@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.55.6" />
-    <meta name="description" content="Documentation for Hugo Learn Theme">
+    <meta name="description" content="List the child pages of a page">
 <meta name="author" content="Mathieu Cornic">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Documentation for Hugo Learn Theme :: Documentation for Hugo Learn Theme</title>
+    <title>Children :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1572389985" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/shortcodes/children/_index.en/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -113,7 +113,7 @@
     
     <li data-nav-id="/cont/" title="Conts" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/cont/">
@@ -432,7 +432,7 @@
     
     <li data-nav-id="/basics/" title="Basics" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/basics/">
@@ -655,8 +655,8 @@
   
     
     <li data-nav-id="/shortcodes/" title="Shortcodes" class="dd-item 
+        parent
         
-        active
         
         ">
       <a href="/shortcodes/">
@@ -795,7 +795,7 @@
  
   
     
-      <li data-nav-id="/shortcodes/children/_index.en/" title="Children" class="dd-item ">
+      <li data-nav-id="/shortcodes/children/_index.en/" title="Children" class="dd-item active">
         <a href="/shortcodes/children/_index.en/">
         Children
         <i class="fas fa-check read-icon"></i>
@@ -1403,33 +1403,256 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Editar esta página' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/shortcodes/children/_index.en.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Editar esta página</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Documentation for Hugo Learn Theme</a> > <a href='/shortcodes/'>Shortcodes</a> > Children
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#demo">Demo</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Children
+            </h1>
+          
 
         
 
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
-           
+
+
+<p>Use the children shortcode to list the child pages of a page and the further descendants (children&rsquo;s children). By default, the shortcode displays links to the child pages.</p>
+
+<h2 id="usage">Usage</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">Parameter</th>
+<th align="left">Default</th>
+<th align="left">Description</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">page</td>
+<td align="left"><em>current</em></td>
+<td align="left">Specify the page name (section name) to display children for</td>
+</tr>
+
+<tr>
+<td align="left">style</td>
+<td align="left">&ldquo;li&rdquo;</td>
+<td align="left">Choose the style used to display descendants. It could be any HTML tag name</td>
+</tr>
+
+<tr>
+<td align="left">showhidden</td>
+<td align="left">&ldquo;false&rdquo;</td>
+<td align="left">When true, child pages hidden from the menu will be displayed</td>
+</tr>
+
+<tr>
+<td align="left">description</td>
+<td align="left">&ldquo;false&rdquo;</td>
+<td align="left">Allows you to include a short text under each page in the list.<br/>when no description exists for the page, children shortcode takes the first 70 words of your content. <a href="https://gohugo.io/content/summaries/">read more info about summaries on gohugo.io</a></td>
+</tr>
+
+<tr>
+<td align="left">depth</td>
+<td align="left">1</td>
+<td align="left">Enter a number to specify the depth of descendants to display. For example, if the value is 2, the shortcode will display 2 levels of child pages. <br/> <strong>Tips:</strong> set 999 to get all descendants</td>
+</tr>
+
+<tr>
+<td align="left">sort</td>
+<td align="left">none</td>
+<td align="left">Sort Children By<br><li><strong>Weight</strong> - to sort on menu order</li><li><strong>Name</strong> - to sort alphabetically on menu label</li><li><strong>Identifier</strong> - to sort alphabetically on identifier set in frontmatter</li><li><strong>URL</strong> - URL</li></td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="demo">Demo</h2>
+
+<pre><code>{{% children  %}}
+</code></pre>
+
+
+
+
+
+
+
+
+<ul class="children children-li">
 	
-		<h1>Customize your own home page</h1>
-		<p>
-		  The site is working. Don't forget to customize this homepage with your own. You typically have 3 choices :
-		</p>
-		<ul>
-			<li><b>1. </b> Create an _index.md document in <b>content</b> folder and fill it with Markdown content</li>
-			<li><b>2. </b> Create an <b>index.html</b> file in the <b>static</b> folder and fill the file with HTML content</li>
-		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
-		</ul>
+
 	
-  
+		
+	
+
+	
+
+	
+		
+	
+
+	
+</ul>
+
+<pre><code>{{% children description=&quot;true&quot;   %}}
+</code></pre>
+
+<ul class="children children-li">
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+</ul>
+
+<pre><code>{{% children depth=&quot;3&quot; showhidden=&quot;true&quot; %}}
+</code></pre>
+
+<ul class="children children-li">
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+</ul>
+
+<pre><code>{{% children style=&quot;h2&quot; depth=&quot;3&quot; description=&quot;true&quot; %}}
+</code></pre>
+
+<ul class="children children-h2">
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+</ul>
+
+<pre><code>{{% children style=&quot;div&quot; depth=&quot;999&quot; %}}
+</code></pre>
+
+<ul class="children children-div">
+    
+
+    
+        
+    
+
+    
+
+    
+        
+    
+
+    
+</ul>
+
+
+
+
+
+<footer class=" footline" >
+	
+</footer>
+
+
         
         </div> 
         
@@ -1896,6 +2119,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1908,6 +2132,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2005,6 +2232,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2020,6 +2248,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2470,8 +2701,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/shortcodes/button.fr/" title="Button (Bouton)"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/cont/" title="Conts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/shortcodes/children/_index.fr/" title="Children (Pages filles)" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Documentation for Hugo Learn Theme :: Documentation for Hugo Learn Theme</title>
+    <title>Multilingual and i18n :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1572389985" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/cont/i18n/_index.en/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -112,8 +112,8 @@
   
     
     <li data-nav-id="/cont/" title="Conts" class="dd-item 
+        parent
         
-        active
         
         ">
       <a href="/cont/">
@@ -366,7 +366,7 @@
  
   
     
-      <li data-nav-id="/cont/i18n/_index.en/" title="Multilingual and i18n" class="dd-item ">
+      <li data-nav-id="/cont/i18n/_index.en/" title="Multilingual and i18n" class="dd-item active">
         <a href="/cont/i18n/_index.en/">
         Multilingual and i18n
         <i class="fas fa-check read-icon"></i>
@@ -432,7 +432,7 @@
     
     <li data-nav-id="/basics/" title="Basics" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/basics/">
@@ -656,7 +656,7 @@
     
     <li data-nav-id="/shortcodes/" title="Shortcodes" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/shortcodes/">
@@ -1403,33 +1403,181 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Editar esta página' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/cont/i18n/_index.en.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Editar esta página</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Documentation for Hugo Learn Theme</a> > <a href='/cont/'>Conts</a> > Multilingual and i18n
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#basic-configuration">Basic configuration</a></li>
+<li><a href="#overwrite-translation-strings">Overwrite translation strings</a></li>
+<li><a href="#disable-language-switching">Disable language switching</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Multilingual and i18n
+            </h1>
+          
 
         
 
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
-           
+
+
+<p><strong>Learn theme</strong> is fully compatible with Hugo multilingual mode.</p>
+
+<p>It provides:</p>
+
+<ul>
+<li>Translation strings for default values (English and French). Feel free to contribute !</li>
+<li>Automatic menu generation from multilingual content</li>
+<li>In-browser language switching</li>
+</ul>
+
+<p><img src="/en/cont/i18n/images/i18n-menu.gif" alt="I18n menu" /></p>
+
+<h2 id="basic-configuration">Basic configuration</h2>
+
+<p>After learning <a href="https://gohugo.io/content-management/multilingual">how Hugo handle multilingual websites</a>, define your languages in your <code>config.toml</code> file.</p>
+
+<p>For example with current French and English website.</p>
+
+<pre><code class="language-toml"># English is the default language
+defaultContentLanguage = &quot;en&quot;
+# Force to have /en/my-page and /fr/my-page routes, even for default language.
+defaultContentLanguageInSubdir= true
+
+[Languages]
+[Languages.en]
+title = &quot;Documentation for Hugo Learn Theme&quot;
+weight = 1
+languageName = &quot;English&quot;
+
+[Languages.fr]
+title = &quot;Documentation du thème Hugo Learn&quot;
+weight = 2
+languageName = &quot;Français&quot;
+</code></pre>
+
+<p>Then, for each new page, append the <em>id</em> of the language to the file.</p>
+
+<ul>
+<li>Single file <code>my-page.md</code> is split in two files:
+
+<ul>
+<li>in English: <code>my-page.en.md</code></li>
+<li>in French: <code>my-page.fr.md</code></li>
+</ul></li>
+<li>Single file <code>_index.md</code> is split in two files:
+
+<ul>
+<li>in English: <code>_index.en.md</code></li>
+<li>in French: <code>_index.fr.md</code></li>
+</ul></li>
+</ul>
+
+
+<div class="notices info" ><p>Be aware that only translated pages are displayed in menu. It&rsquo;s not replaced with default language content.</p>
+</div>
+
+
+
+<div class="notices tip" ><p>Use <a href="https://gohugo.io/content-management/multilingual/#translate-your-content">slug</a> Front Matter parameter to translate urls too.</p>
+</div>
+
+
+<h2 id="overwrite-translation-strings">Overwrite translation strings</h2>
+
+<p>Translations strings are used for common default values used in the theme (<em>Edit this page</em> button, <em>Search placeholder</em> and so on). Translations are available in french and english but you may use another language or want to override default values.</p>
+
+<p>To override these values, create a new file in your local i18n folder <code>i18n/&lt;idlanguage&gt;.toml</code> and inspire yourself from the theme <code>themes/hugo-theme-learn/i18n/en.toml</code></p>
+
+<p>By the way, as these translations could be used by other people, please take the time to propose a translation by <a href="https://github.com/matcornic/hugo-theme-learn/pulls">making a PR</a> to the theme !</p>
+
+<h2 id="disable-language-switching">Disable language switching</h2>
+
+<p>Switching the language in the browser is a great feature, but for some reasons you may want to disable it.</p>
+
+<p>Just set <code>disableLanguageSwitchingButton=true</code> in your <code>config.toml</code></p>
+
+<pre><code class="language-toml">[params]
+  # When using mulitlingual website, disable the switch language button.
+  disableLanguageSwitchingButton = true
+</code></pre>
+
+<p><img src="/en/cont/i18n/images/i18n-menu.gif" alt="I18n menu" /></p>
+
+
+<footer class=" footline" >
 	
-		<h1>Customize your own home page</h1>
-		<p>
-		  The site is working. Don't forget to customize this homepage with your own. You typically have 3 choices :
-		</p>
-		<ul>
-			<li><b>1. </b> Create an _index.md document in <b>content</b> folder and fill it with Markdown content</li>
-			<li><b>2. </b> Create an <b>index.html</b> file in the <b>static</b> folder and fill the file with HTML content</li>
-		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
-		</ul>
-	
-  
+</footer>
+
+
         
         </div> 
         
@@ -1461,8 +1609,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1476,6 +1622,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1669,6 +1818,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1684,6 +1834,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2470,8 +2623,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/cont/i18n/_index.fr/" title="Multi-langue et i18n"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/cont/" title="Conts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/cont/tags.en/" title="Tags" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

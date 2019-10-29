@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Basics on Documentation for Hugo Learn Theme</title>
+    <link>/basics/</link>
+    <description>Recent content in Basics on Documentation for Hugo Learn Theme</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>es-PE</language>
+    <lastBuildDate>Sat, 09 Apr 2016 16:50:16 +0200</lastBuildDate>
+    
+	<atom:link href="/basics/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Basics</title>
+      <link>/basics/_index.en/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/basics/_index.en/</guid>
+      <description>Chapter 1 Basics Discover what this Hugo theme is all about and the core-concepts behind it.</description>
+    </item>
+    
+    <item>
+      <title>Démarrage</title>
+      <link>/basics/_index.fr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/basics/_index.fr/</guid>
+      <description>Chapitre 1 Démarrage Découvrez comment utiliser ce thème Hugo et apprenez-en les concepts</description>
+    </item>
+    
+    <item>
+      <title>Prérequis</title>
+      <link>/basics/requirements/_index.fr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/basics/requirements/_index.fr/</guid>
+      <description>Grâce à la simplicité d&amp;rsquo;Hugo, cette page est vide car il n&amp;rsquo;y a quasi pas de prérequis pour utiliser le thème.
+Téléchargez la dernière version du binaire Hugo (&amp;gt; 0.25) pour votre Système d&amp;rsquo;exploitation (Windows, Linux, Mac) : et c&amp;rsquo;est tout !</description>
+    </item>
+    
+    <item>
+      <title>Requirements</title>
+      <link>/basics/requirements/_index.en/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/basics/requirements/_index.en/</guid>
+      <description>Thanks to the simplicity of Hugo, this page is as empty as this theme needs requirements.
+Just download latest version of Hugo binary (&amp;gt; 0.25) for your OS (Windows, Linux, Mac) : it&amp;rsquo;s that simple.</description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>/basics/installation/_index.en/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/basics/installation/_index.en/</guid>
+      <description>The following steps are here to help you initialize your new website. If you don&amp;rsquo;t know Hugo at all, we strongly suggest you learn more about it by following this great documentation for beginners.
+Create your project Hugo provides a new command to create a new website.
+hugo new site &amp;lt;new_project&amp;gt;  Install the theme Install the Hugo-theme-learn theme by following this documentation
+This theme&amp;rsquo;s repository is: https://github.com/matcornic/hugo-theme-learn.git
+Alternatively, you can download the theme as .</description>
+    </item>
+    
+    <item>
+      <title>Installation</title>
+      <link>/basics/installation/_index.fr/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/basics/installation/_index.fr/</guid>
+      <description>Les étapes suivantes sont là pour vous aider à initialiser votre site. Si vous ne connaissez pas du tout Hugo, il est fortement conseillé de vous entrainer en suivant ce super tuto pour débutants.
+Créer votre projet Hugo fournit une commande new pour créer un nouveau site.
+hugo new site &amp;lt;new_project&amp;gt;  Installer le thème Installer le thème Hugo-theme-learn en suivant cette documentation
+Le repo du thème est : https://github.</description>
+    </item>
+    
+    <item>
+      <title>Configuration</title>
+      <link>/basics/configuration/_index.en/</link>
+      <pubDate>Sat, 09 Apr 2016 16:50:16 +0200</pubDate>
+      
+      <guid>/basics/configuration/_index.en/</guid>
+      <description>Global site parameters On top of Hugo global configuration, Hugo-theme-learn lets you define the following parameters in your config.toml (here, values are default).
+Note that some of these parameters are explained in details in other sections of this documentation.
+[params] # Prefix URL to edit current page. Will display an &amp;quot;Edit this page&amp;quot; button on top right hand corner of every page. # Useful to give opportunity to people to create merge request for your doc.</description>
+    </item>
+    
+    <item>
+      <title>Configuration</title>
+      <link>/basics/configuration/_index.fr/</link>
+      <pubDate>Sat, 09 Apr 2016 16:50:16 +0200</pubDate>
+      
+      <guid>/basics/configuration/_index.fr/</guid>
+      <description>Paramètres globaux du site En plus de la configuration globale d&amp;rsquo;Hugo, Hugo-theme-learn vous permet de définir les paramètres suivant dans votre fichier config.toml (ci-dessous sont affichées les valeurs par défaut).
+Notez que certains de ces paramètres sont expliqués en détails dans d&amp;rsquo;autres sections de cette documentation.
+[params] # L&#39;URL préfixe pour éditer la page courante. Ce paramètre affichera un bouton &amp;quot;Modifier cette page&amp;quot; on haut de de chacune des pages.</description>
+    </item>
+    
+    <item>
+      <title>Personnalisation du style</title>
+      <link>/basics/style-customization/_index.fr/</link>
+      <pubDate>Sat, 09 Apr 2016 16:50:16 +0200</pubDate>
+      
+      <guid>/basics/style-customization/_index.fr/</guid>
+      <description>Hugo-theme-learn a été conçu pour être aussi configurable que possible en définissant plusieurs partials
+Dans themes/hugo-theme-learn/layouts/partials/, vous pourrez trouver tous les partials définis pour ce thème. Si vous avez besoin d&amp;rsquo;écraser quelque chose, ne modifiez pas le code directement. A la place, suivez cette page. Vous créerez alors un nouveau partial dans le dossier layouts/partials de votre site local. Ce partial aura la priorité.
+Ce thème définit les partials suivant :</description>
+    </item>
+    
+    <item>
+      <title>Style customization</title>
+      <link>/basics/style-customization/_index.en/</link>
+      <pubDate>Sat, 09 Apr 2016 16:50:16 +0200</pubDate>
+      
+      <guid>/basics/style-customization/_index.en/</guid>
+      <description>Hugo-theme-learn has been built to be as configurable as possible by defining multiple partials
+In themes/hugo-theme-learn/layouts/partials/, you will find all the partials defined for this theme. If you need to overwrite something, don&amp;rsquo;t change the code directly. Instead follow this page. You&amp;rsquo;d create a new partial in the layouts/partials folder of your local project. This partial will have the priority.
+This theme defines the following partials :
+ header: the header of the content page (contains the breadcrumbs).</description>
+    </item>
+    
+  </channel>
+</rss>

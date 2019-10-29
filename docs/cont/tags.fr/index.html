@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Documentation for Hugo Learn Theme :: Documentation for Hugo Learn Theme</title>
+    <title>Tags :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1572389985" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/cont/tags.fr/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -112,8 +112,8 @@
   
     
     <li data-nav-id="/cont/" title="Conts" class="dd-item 
+        parent
         
-        active
         
         ">
       <a href="/cont/">
@@ -404,7 +404,7 @@
  
   
     
-      <li data-nav-id="/cont/tags.fr/" title="Tags" class="dd-item ">
+      <li data-nav-id="/cont/tags.fr/" title="Tags" class="dd-item active">
         <a href="/cont/tags.fr/">
         Tags
         <i class="fas fa-check read-icon"></i>
@@ -432,7 +432,7 @@
     
     <li data-nav-id="/basics/" title="Basics" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/basics/">
@@ -656,7 +656,7 @@
     
     <li data-nav-id="/shortcodes/" title="Shortcodes" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/shortcodes/">
@@ -1403,33 +1403,136 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Editar esta página' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/cont/tags.fr.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Editar esta página</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Documentation for Hugo Learn Theme</a> > <a href='/cont/'>Conts</a> > Tags
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#configuration">Configuration</a></li>
+<li><a href="#comportement">Comportement</a></li>
+<li><a href="#liste-des-tags">Liste des tags</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
+<div class="tags">
+
+  <a class="tag-link" href="/tags/documentation">documentation</a>
+
+  <a class="tag-link" href="/tags/tutorial">tutorial</a>
+
+</div>
+
         </div>
         
         <div id="body-inner">
+          
+            <h1>
+              
+              Tags
+            </h1>
           
 
         
 
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
-           
+
+
+<p>Le <em>thème Learn</em> supporte une des taxonomy par défaut de GoHugo : les tags.</p>
+
+<h2 id="configuration">Configuration</h2>
+
+<p>Il suffit d&rsquo;ajouter un tableau de tags sur la page  :</p>
+
+<pre><code class="language-markdown">---
+date: 2018-11-29T08:41:44+01:00
+title: Tutoriel pour le thème
+weight: 15
+tags: [&quot;tutoriel&quot;, &quot;theme&quot;] 
+---
+</code></pre>
+
+<h2 id="comportement">Comportement</h2>
+
+<p>Les tags sont affichés en haut de la page, dans l&rsquo;ordre dans lequel ils ont été saisis.</p>
+
+<p>Chaque tag est un lien vers une page <em>Taxonomy</em>, qui affiche tous les article avec ce tag.</p>
+
+<h2 id="liste-des-tags">Liste des tags</h2>
+
+<p>Il est possible de rajouter un raccourci dans le fichier <code>config.toml</code> afin d&rsquo;afficher une page listant tous les tags</p>
+
+<pre><code class="language-toml">[[menu.shortcuts]]
+name = &quot;&lt;i class='fas fa-tags'&gt;&lt;/i&gt; Tags&quot;
+url = &quot;/tags&quot;
+weight = 30
+</code></pre>
+
+
+<footer class=" footline" >
 	
-		<h1>Customize your own home page</h1>
-		<p>
-		  The site is working. Don't forget to customize this homepage with your own. You typically have 3 choices :
-		</p>
-		<ul>
-			<li><b>1. </b> Create an _index.md document in <b>content</b> folder and fill it with Markdown content</li>
-			<li><b>2. </b> Create an <b>index.html</b> file in the <b>static</b> folder and fill the file with HTML content</li>
-		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
-		</ul>
-	
-  
+</footer>
+
+
         
         </div> 
         
@@ -1461,8 +1564,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1476,6 +1577,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1701,6 +1805,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1719,6 +1824,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2470,8 +2578,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/cont/tags.en/" title="Tags"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/cont/" title="Conts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/basics/" title="Basics" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

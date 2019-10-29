@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.55.6" />
-    <meta name="description" content="Documentation for Hugo Learn Theme">
+    <meta name="description" content="Génération de diagrammes à partir de texte, dans le même style que Markdown">
 <meta name="author" content="Mathieu Cornic">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Documentation for Hugo Learn Theme :: Documentation for Hugo Learn Theme</title>
+    <title>Mermaid :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1572389985" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/shortcodes/mermaid.fr/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -113,7 +113,7 @@
     
     <li data-nav-id="/cont/" title="Conts" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/cont/">
@@ -432,7 +432,7 @@
     
     <li data-nav-id="/basics/" title="Basics" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/basics/">
@@ -655,8 +655,8 @@
   
     
     <li data-nav-id="/shortcodes/" title="Shortcodes" class="dd-item 
+        parent
         
-        active
         
         ">
       <a href="/shortcodes/">
@@ -890,7 +890,7 @@
  
   
     
-      <li data-nav-id="/shortcodes/mermaid.fr/" title="Mermaid" class="dd-item ">
+      <li data-nav-id="/shortcodes/mermaid.fr/" title="Mermaid" class="dd-item active">
         <a href="/shortcodes/mermaid.fr/">
         Mermaid
         <i class="fas fa-check read-icon"></i>
@@ -1403,33 +1403,384 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Editar esta página' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/shortcodes/mermaid.fr.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Editar esta página</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Documentation for Hugo Learn Theme</a> > <a href='/shortcodes/'>Shortcodes</a> > Mermaid
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#flowchart-example">Flowchart example</a></li>
+<li><a href="#sequence-example">Sequence example</a></li>
+<li><a href="#gantt-example">GANTT Example</a>
+<ul>
+<li><a href="#class-example">Class example</a></li>
+<li><a href="#git-example">Git example</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Mermaid
+            </h1>
+          
 
         
 
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
-           
+
+
+<p><a href="https://mermaidjs.github.io/">Mermaid</a> est une bibliothèque Javascript qui permet de générer des diagrammes (séquence, état, gantt, etc.) à partir de texte, dans le même style que Markdown.</p>
+
+<p>Insérer votre code Mermaid dans un shortcode <code>mermaid</code> et c&rsquo;est tout.</p>
+
+<h2 id="flowchart-example">Flowchart example</h2>
+
+<pre><code>{{&lt;mermaid align=&quot;left&quot;&gt;}}
+graph LR;
+    A[Bords droits] --&gt;|Lien texte| B(Bords arondis)
+    B --&gt; C{Décision}
+    C --&gt;|Un| D[Résultat un]
+    C --&gt;|Deux| E[Résultat deux]
+{{&lt; /mermaid &gt;}}
+</code></pre>
+
+<p>renders as</p>
+
+
+<div class="mermaid" align="left">
+graph LR;
+	A[Bords droits] -->|Lien texte| B(Bords arondis)
+	B --> C{Décision}
+	C -->|Un| D[Résultat un]
+	C -->|Deux| E[Résultat deux]
+</div>
+
+
+<p>or you can use this alternative syntax:</p>
+
+<pre>
+```mermaid
+graph LR;
+	A[Bords droits] -->|Lien texte| B(Bords arondis)
+	B --> C{Décision}
+	C -->|Un| D[Résultat un]
+	C -->|Deux| E[Résultat deux]
+```
+</pre>
+
+<p>renders as</p>
+
+<pre><code class="language-mermaid">graph LR;
+	A[Bords droits] --&gt;|Lien texte| B(Bords arondis)
+	B --&gt; C{Décision}
+	C --&gt;|Un| D[Résultat un]
+	C --&gt;|Deux| E[Résultat deux]
+</code></pre>
+
+<h2 id="sequence-example">Sequence example</h2>
+
+<pre><code>{{&lt;mermaid&gt;}}
+sequenceDiagram
+    participant Alice
+    participant Bob
+    Alice-&gt;&gt;John: Salut John, comment vas-tu?
+    loop Vérification
+        John-&gt;John: Se bat contre l'hyponcodrie.
+    end
+    Note right of John: Les pensées rationnelles&lt;br/&gt;prédominent...
+    John--&gt;Alice: Super!
+    John-&gt;Bob: Et toi?
+    Bob--&gt;John: Au top!
+{{&lt; /mermaid &gt;}}
+</code></pre>
+
+<p>renders as</p>
+
+
+<div class="mermaid" align="center">
+sequenceDiagram
+	participant Alice
+	participant Bob
+	Alice->>John: Salut John, comment vas-tu?
+	loop Vérification
+		John->John: Se bat contre l'hyponcodrie.
+	end
+	Note right of John: Les pensées rationnelles<br/>prédominent...
+	John-->Alice: Super!
+	John->Bob: Et toi?
+	Bob-->John: Au top!
+</div>
+
+
+<p>or you can use this alternative syntax:</p>
+
+<pre>
+```mermaid
+sequenceDiagram
+	participant Alice
+	participant Bob
+	Alice->>John: Salut John, comment vas-tu?
+	loop Vérification
+		John->John: Se bat contre l'hyponcodrie.
+	end
+	Note right of John: Les pensées rationnelles<br/>prédominent...
+	John-->Alice: Super!
+	John->Bob: Et toi?
+	Bob-->John: Au top!
+```
+</pre>
+
+<p>renders as</p>
+
+<pre><code class="language-mermaid">sequenceDiagram
+	participant Alice
+	participant Bob
+	Alice-&gt;&gt;John: Salut John, comment vas-tu?
+	loop Vérification
+		John-&gt;John: Se bat contre l'hyponcodrie.
+	end
+	Note right of John: Les pensées rationnelles&lt;br/&gt;prédominent...
+	John--&gt;Alice: Super!
+	John-&gt;Bob: Et toi?
+	Bob--&gt;John: Au top!
+</code></pre>
+
+<h2 id="gantt-example">GANTT Example</h2>
+
+<pre><code>{{&lt;mermaid&gt;}}
+gantt
+        dateFormat  YYYY-MM-DD
+        title Ajout de la fonctionnalité de GANTT à Mermaid
+        section Une section
+        Tâche complétée            :done,    des1, 2014-01-06,2014-01-08
+        Tâche en cours             :active,  des2, 2014-01-09, 3d
+        Future tâche               :         des3, after des2, 5d
+        Future tâche 2             :         des4, after des3, 5d
+        section Tâches critiques
+        Tâche complétée dans le chemin critique :crit, done, 2014-01-06,24h
+        Implémenter le parser et jison          :crit, done, after des1, 2d
+        Créer des tests pour le parser          :crit, active, 3d
+        Future tâche dans le chemin critique    :crit, 5d
+        Créer des tests pour le renderer        :2d
+        Ajout à Mermaid                         :1d
+{{&lt; /mermaid &gt;}}
+</code></pre>
+
+<p>renders as</p>
+
+
+<div class="mermaid" align="center">
+gantt
+		dateFormat  YYYY-MM-DD
+		title Ajout de la fonctionnalité de GANTT à Mermaid
+		section Une section
+		Tâche complétée            :done,    des1, 2014-01-06,2014-01-08
+		Tâche en cours             :active,  des2, 2014-01-09, 3d
+		Future tâche               :         des3, after des2, 5d
+		Future tâche 2             :         des4, after des3, 5d
+		section Tâches critiques
+		Tâche complétée dans le chemin critique :crit, done, 2014-01-06,24h
+		Implémenter le parser et jison          :crit, done, after des1, 2d
+		Créer des tests pour le parser             :crit, active, 3d
+		Future tâche dans le chemin critique        :crit, 5d
+		Créer des tests pour le renderer           :2d
+		Ajout à Mermaid                      :1d
+</div>
+
+
+<p>or you can use this alternative syntax:</p>
+
+<pre>
+```mermaid
+gantt
+		dateFormat  YYYY-MM-DD
+		title Ajout de la fonctionnalité de GANTT à Mermaid
+		section Une section
+		Tâche complétée            :done,    des1, 2014-01-06,2014-01-08
+		Tâche en cours             :active,  des2, 2014-01-09, 3d
+		Future tâche               :         des3, after des2, 5d
+		Future tâche 2             :         des4, after des3, 5d
+		section Tâches critiques
+		Tâche complétée dans le chemin critique :crit, done, 2014-01-06,24h
+		Implémenter le parser et jison          :crit, done, after des1, 2d
+		Créer des tests pour le parser             :crit, active, 3d
+		Future tâche dans le chemin critique        :crit, 5d
+		Créer des tests pour le renderer           :2d
+		Ajout à Mermaid                      :1d
+```
+</pre>
+
+<p>renders as</p>
+
+<pre><code class="language-mermaid">gantt
+		dateFormat  YYYY-MM-DD
+		title Ajout de la fonctionnalité de GANTT à Mermaid
+		section Une section
+		Tâche complétée            :done,    des1, 2014-01-06,2014-01-08
+		Tâche en cours             :active,  des2, 2014-01-09, 3d
+		Future tâche               :         des3, after des2, 5d
+		Future tâche 2             :         des4, after des3, 5d
+		section Tâches critiques
+		Tâche complétée dans le chemin critique :crit, done, 2014-01-06,24h
+		Implémenter le parser et jison          :crit, done, after des1, 2d
+		Créer des tests pour le parser             :crit, active, 3d
+		Future tâche dans le chemin critique        :crit, 5d
+		Créer des tests pour le renderer           :2d
+		Ajout à Mermaid                      :1d
+</code></pre>
+
+<h3 id="class-example">Class example</h3>
+
+<pre>
+```mermaid
+classDiagram
+  Class01 <|-- AveryLongClass : Cool
+  Class03 *-- Class04
+  Class05 o-- Class06
+  Class07 .. Class08
+  Class09 --> C2 : Where am i?
+  Class09 --* C3
+  Class09 --|> Class07
+  Class07 : equals()
+  Class07 : Object[] elementData
+  Class01 : size()
+  Class01 : int chimp
+  Class01 : int gorilla
+  Class08 <--> C2: Cool label
+```
+</pre>
+
+<p>renders as</p>
+
+<pre><code class="language-mermaid">classDiagram
+  Class01 &lt;|-- AveryLongClass : Cool
+  Class03 *-- Class04
+  Class05 o-- Class06
+  Class07 .. Class08
+  Class09 --&gt; C2 : Where am i?
+  Class09 --* C3
+  Class09 --|&gt; Class07
+  Class07 : equals()
+  Class07 : Object[] elementData
+  Class01 : size()
+  Class01 : int chimp
+  Class01 : int gorilla
+  Class08 &lt;--&gt; C2: Cool label
+</code></pre>
+
+<h3 id="git-example">Git example</h3>
+
+<pre>
+```mermaid
+gitGraph:
+options
+{
+  "nodeSpacing": 150,
+  "nodeRadius": 10
+}
+end
+  commit
+  branch newbranch
+  checkout newbranch
+  commit
+  commit
+  checkout master
+  commit
+  commit
+  merge newbranch
+```
+</pre>
+
+<p>renders as</p>
+
+<pre><code class="language-mermaid">gitGraph:
+options
+{
+  &quot;nodeSpacing&quot;: 150,
+  &quot;nodeRadius&quot;: 10
+}
+end
+  commit
+  branch newbranch
+  checkout newbranch
+  commit
+  commit
+  checkout master
+  commit
+  commit
+  merge newbranch
+</code></pre>
+
+
+<footer class=" footline" >
 	
-		<h1>Customize your own home page</h1>
-		<p>
-		  The site is working. Don't forget to customize this homepage with your own. You typically have 3 choices :
-		</p>
-		<ul>
-			<li><b>1. </b> Create an _index.md document in <b>content</b> folder and fill it with Markdown content</li>
-			<li><b>2. </b> Create an <b>index.html</b> file in the <b>static</b> folder and fill the file with HTML content</li>
-		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
-		</ul>
-	
-  
+</footer>
+
+
         
         </div> 
         
@@ -1896,6 +2247,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1908,6 +2260,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2085,6 +2440,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2100,6 +2456,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2470,8 +2829,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/shortcodes/mermaid.en/" title="Mermaid"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/cont/" title="Conts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/shortcodes/notice.en/" title="Notice" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

@@ -4,12 +4,12 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="generator" content="Hugo 0.55.6" />
-    <meta name="description" content="Documentation for Hugo Learn Theme">
+    <meta name="description" content="Message pour vous aider à structurer votre contenu">
 <meta name="author" content="Mathieu Cornic">
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Documentation for Hugo Learn Theme :: Documentation for Hugo Learn Theme</title>
+    <title>Notice :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1572389985" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/shortcodes/notice.fr/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -113,7 +113,7 @@
     
     <li data-nav-id="/cont/" title="Conts" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/cont/">
@@ -432,7 +432,7 @@
     
     <li data-nav-id="/basics/" title="Basics" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/basics/">
@@ -655,8 +655,8 @@
   
     
     <li data-nav-id="/shortcodes/" title="Shortcodes" class="dd-item 
+        parent
         
-        active
         
         ">
       <a href="/shortcodes/">
@@ -928,7 +928,7 @@
  
   
     
-      <li data-nav-id="/shortcodes/notice.fr/" title="Notice" class="dd-item ">
+      <li data-nav-id="/shortcodes/notice.fr/" title="Notice" class="dd-item active">
         <a href="/shortcodes/notice.fr/">
         Notice
         <i class="fas fa-check read-icon"></i>
@@ -1403,33 +1403,160 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Editar esta página' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/shortcodes/notice.fr.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Editar esta página</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Documentation for Hugo Learn Theme</a> > <a href='/shortcodes/'>Shortcodes</a> > Notice
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#note">Note</a></li>
+<li><a href="#info">Info</a></li>
+<li><a href="#tip">Tip</a></li>
+<li><a href="#warning">Warning</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Notice
+            </h1>
+          
 
         
 
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
-           
+
+
+<p>Le shortcode <em>Notice</em> permet d&rsquo;afficher 4 types de message pour vous aider à structurer votre contenu.</p>
+
+<h3 id="note">Note</h3>
+
+<pre><code>{{% notice note %}}
+Une notice de type *note*
+{{% /notice %}}
+</code></pre>
+
+<p>s&rsquo;affiche comme</p>
+
+
+<div class="notices note" ><p>Une notice de type <em>note</em></p>
+</div>
+
+
+<h3 id="info">Info</h3>
+
+<pre><code>{{% notice info %}}
+Une notice de type *info*
+{{% /notice %}}
+</code></pre>
+
+<p>s&rsquo;affiche comme</p>
+
+
+<div class="notices info" ><p>Une notice de type <em>info</em></p>
+</div>
+
+
+<h3 id="tip">Tip</h3>
+
+<pre><code>{{% notice tip %}}
+Une notice de type *tip*
+{{% /notice %}}
+</code></pre>
+
+<p>s&rsquo;affiche comme</p>
+
+
+<div class="notices tip" ><p>Une notice de type <em>tip</em></p>
+</div>
+
+
+<h3 id="warning">Warning</h3>
+
+<pre><code>{{% notice warning %}}
+Une notice de type *warning*
+{{% /notice %}}
+</code></pre>
+
+<p>s&rsquo;affiche comme</p>
+
+
+<div class="notices warning" ><p>Une notice de type <em>warning</em></p>
+</div>
+
+
+
+<footer class=" footline" >
 	
-		<h1>Customize your own home page</h1>
-		<p>
-		  The site is working. Don't forget to customize this homepage with your own. You typically have 3 choices :
-		</p>
-		<ul>
-			<li><b>1. </b> Create an _index.md document in <b>content</b> folder and fill it with Markdown content</li>
-			<li><b>2. </b> Create an <b>index.html</b> file in the <b>static</b> folder and fill the file with HTML content</li>
-		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
-		</ul>
-	
-  
+</footer>
+
+
         
         </div> 
         
@@ -1896,6 +2023,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1908,6 +2036,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2117,6 +2248,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -2132,6 +2264,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2470,8 +2605,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/shortcodes/notice.en/" title="Notice"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/cont/" title="Conts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/shortcodes/siteparam.en/" title="Site param" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

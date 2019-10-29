@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Documentation for Hugo Learn Theme :: Documentation for Hugo Learn Theme</title>
+    <title>Raccourcis du menu :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1572389985" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/cont/menushortcuts.fr/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -112,8 +112,8 @@
   
     
     <li data-nav-id="/cont/" title="Conts" class="dd-item 
+        parent
         
-        active
         
         ">
       <a href="/cont/">
@@ -309,7 +309,7 @@
  
   
     
-      <li data-nav-id="/cont/menushortcuts.fr/" title="Raccourcis du menu" class="dd-item ">
+      <li data-nav-id="/cont/menushortcuts.fr/" title="Raccourcis du menu" class="dd-item active">
         <a href="/cont/menushortcuts.fr/">
         Raccourcis du menu
         <i class="fas fa-check read-icon"></i>
@@ -432,7 +432,7 @@
     
     <li data-nav-id="/basics/" title="Basics" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/basics/">
@@ -656,7 +656,7 @@
     
     <li data-nav-id="/shortcodes/" title="Shortcodes" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/shortcodes/">
@@ -1403,33 +1403,203 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Editar esta página' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/cont/menushortcuts.fr.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Editar esta página</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Documentation for Hugo Learn Theme</a> > <a href='/cont/'>Conts</a> > Raccourcis du menu
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#configuration-simple">Configuration simple</a></li>
+<li><a href="#i18n">Configuration pour le mode multi-langue</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Raccourcis du menu
+            </h1>
+          
 
         
 
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
-           
+
+
+<p>Vous pouvez définir des entrées ou raccourcis supplémentaires dans le menu sans avoir besoin d&rsquo;être lié à un contenu du site.</p>
+
+<h2 id="configuration-simple">Configuration simple</h2>
+
+<p>Editez le fichier de configuration <code>config.toml</code> et ajoutez une entrée <code>[[menu.shortcuts]]</code> pour chaque lien que vous voulez ajouter.</p>
+
+<p>Exemple pour ce site:</p>
+
+<pre><code>[[menu.shortcuts]] 
+name = &quot;&lt;i class='fab fa-github'&gt;&lt;/i&gt; Github repo&quot;
+identifier = &quot;ds&quot;
+url = &quot;https://github.com/matcornic/hugo-theme-learn&quot;
+weight = 10
+
+[[menu.shortcuts]]
+name = &quot;&lt;i class='fas fa-camera'&gt;&lt;/i&gt; Showcases&quot;
+url = &quot;/showcase&quot;
+weight = 11
+
+[[menu.shortcuts]]
+name = &quot;&lt;i class='fas fa-bookmark'&gt;&lt;/i&gt; Hugo Documentation&quot;
+identifier = &quot;hugodoc&quot;
+url = &quot;https://gohugo.io/&quot;
+weight = 20
+
+[[menu.shortcuts]]
+name = &quot;&lt;i class='fas fa-bullhorn'&gt;&lt;/i&gt; Credits&quot;
+url = &quot;/credits&quot;
+weight = 30
+</code></pre>
+
+<p>Par défaut, les raccourcis sont précédés par un titre. Ce titre peut être désactivé en ajouter le paramètre <code>disableShortcutsTitle=true</code> dans la section <code>params</code> de votre <code>config.toml</code>.
+Cependant, si vous voulez garder le titre mais changer sa valeur, vous pouvez modifier votre configuration multilangue locale en changeant les <em>translation string</em>.</p>
+
+<p>Par exemple, dans votre fichier local <code>i18n/en.toml</code>, ajouter le contenu</p>
+
+<pre><code>[Shortcuts-Title]
+other = &quot;&lt;Votre valeur&gt;&quot;
+</code></pre>
+
+<p>Plus d&rsquo;infos sur <a href="https://gohugo.io/extras/menus/">les menus Hugo</a> et sur <a href="https://gohugo.io/content-management/multilingual/#translation-of-strings">les translations strings</a></p>
+
+<h2 id="i18n">Configuration pour le mode multi-langue</h2>
+
+<p>Quand vous utilisez un site multi-langue, vous pouvez avoir des menus différents pour chaque langage. Dans le fichier de configuration <code>config.toml</code>, préfixez votre configuration par <code>Languages.&lt;language-id&gt;</code>.</p>
+
+<p>Par exemple, avec ce site :</p>
+
+<pre><code>[Languages]
+[Languages.en]
+title = &quot;Documentation for Hugo Learn Theme&quot;
+weight = 1
+languageName = &quot;English&quot;
+
+[[Languages.en.menu.shortcuts]] 
+name = &quot;&lt;i class='fab fa-github'&gt;&lt;/i&gt; Github repo&quot;
+identifier = &quot;ds&quot;
+url = &quot;https://github.com/matcornic/hugo-theme-learn&quot;
+weight = 10
+
+[[Languages.en.menu.shortcuts]]
+name = &quot;&lt;i class='fas fa-camera'&gt;&lt;/i&gt; Showcases&quot;
+url = &quot;/showcase&quot;
+weight = 11
+
+[[Languages.en.menu.shortcuts]]
+name = &quot;&lt;i class='fas fa-bookmark'&gt;&lt;/i&gt; Hugo Documentation&quot;
+identifier = &quot;hugodoc&quot;
+url = &quot;https://gohugo.io/&quot;
+weight = 20
+
+[[Languages.en.menu.shortcuts]]
+name = &quot;&lt;i class='fas fa-bullhorn'&gt;&lt;/i&gt; Credits&quot;
+url = &quot;/credits&quot;
+weight = 30
+
+[Languages.fr]
+title = &quot;Documentation du thème Hugo Learn&quot;
+weight = 2
+languageName = &quot;Français&quot;
+
+[[Languages.fr.menu.shortcuts]]
+name = &quot;&lt;i class='fab fa-github'&gt;&lt;/i&gt; Repo Github&quot;
+identifier = &quot;ds&quot;
+url = &quot;https://github.com/matcornic/hugo-theme-learn&quot;
+weight = 10
+
+[[Languages.fr.menu.shortcuts]]
+name = &quot;&lt;i class='fas fa-camera'&gt;&lt;/i&gt; Vitrine&quot;
+url = &quot;/showcase&quot;
+weight = 11
+
+[[Languages.fr.menu.shortcuts]]
+name = &quot;&lt;i class='fas fa-bookmark'&gt;&lt;/i&gt; Documentation Hugo&quot;
+identifier = &quot;hugodoc&quot;
+url = &quot;https://gohugo.io/&quot;
+weight = 20
+
+[[Languages.fr.menu.shortcuts]]
+name = &quot;&lt;i class='fas fa-bullhorn'&gt;&lt;/i&gt; Crédits&quot;
+url = &quot;/credits&quot;
+weight = 30
+</code></pre>
+
+<p>Plus d&rsquo;infos sur <a href="https://gohugo.io/extras/menus/">les menus Hugo</a> et les <a href="https://gohugo.io/content-management/multilingual/#menus">menus multi-langue Hugo</a></p>
+
+
+<footer class=" footline" >
 	
-		<h1>Customize your own home page</h1>
-		<p>
-		  The site is working. Don't forget to customize this homepage with your own. You typically have 3 choices :
-		</p>
-		<ul>
-			<li><b>1. </b> Create an _index.md document in <b>content</b> folder and fill it with Markdown content</li>
-			<li><b>2. </b> Create an <b>index.html</b> file in the <b>static</b> folder and fill the file with HTML content</li>
-		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
-		</ul>
-	
-  
+</footer>
+
+
         
         </div> 
         
@@ -1461,8 +1631,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1476,6 +1644,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1621,6 +1792,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1636,6 +1808,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2470,8 +2645,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/cont/menushortcuts.en/" title="Menu extra shortcuts"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/cont/" title="Conts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/cont/icons.en/" title="Icons and logos" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

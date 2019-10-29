@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Documentation for Hugo Learn Theme :: Documentation for Hugo Learn Theme</title>
+    <title>Multi-langue et i18n :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1572389985" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/cont/i18n/_index.fr/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -112,8 +112,8 @@
   
     
     <li data-nav-id="/cont/" title="Conts" class="dd-item 
+        parent
         
-        active
         
         ">
       <a href="/cont/">
@@ -347,7 +347,7 @@
  
   
     
-      <li data-nav-id="/cont/i18n/_index.fr/" title="Multi-langue et i18n" class="dd-item ">
+      <li data-nav-id="/cont/i18n/_index.fr/" title="Multi-langue et i18n" class="dd-item active">
         <a href="/cont/i18n/_index.fr/">
         Multi-langue et i18n
         <i class="fas fa-check read-icon"></i>
@@ -432,7 +432,7 @@
     
     <li data-nav-id="/basics/" title="Basics" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/basics/">
@@ -656,7 +656,7 @@
     
     <li data-nav-id="/shortcodes/" title="Shortcodes" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/shortcodes/">
@@ -1403,33 +1403,181 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Editar esta página' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/cont/i18n/_index.fr.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Editar esta página</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Documentation for Hugo Learn Theme</a> > <a href='/cont/'>Conts</a> > Multi-langue et i18n
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#configuration-simple">Configuration simple</a></li>
+<li><a href="#surcharger-les-translation-strings">Surcharger les <em>translation strings</em></a></li>
+<li><a href="#désactiver-le-changement-de-langue">Désactiver le changement de langue</a></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Multi-langue et i18n
+            </h1>
+          
 
         
 
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
-           
+
+
+<p><strong>Learn</strong> est complètement compatible avec le mode multi-langue d&rsquo;Hugo.</p>
+
+<p>Il fournit :</p>
+
+<ul>
+<li>Des <em>translation strings</em> pour les valeurs par défaut utilisées par le thème (Anglais et Français). N&rsquo;hésitez pas à contribuer !</li>
+<li>Génération automatique du menu avec le contenu multi-langue</li>
+<li>Modification de la langue dans le navigateur</li>
+</ul>
+
+<p><img src="/en/cont/i18n/images/i18n-menu.gif" alt="I18n menu" /></p>
+
+<h2 id="configuration-simple">Configuration simple</h2>
+
+<p>Après avoir appris <a href="https://gohugo.io/content-management/multilingual">comment Hugo gère les sites multi-langue</a>, définissez vos langues dans votre fichier <code>config.toml</code>.</p>
+
+<p>Par exemple, pour ce site, avec du contenu en français et en anglais.</p>
+
+<pre><code class="language-toml"># Anglais est la langue par défaut
+defaultContentLanguage = &quot;en&quot;
+# Force d'avoir /en/ma-page et /fr/ma-page routes, même avec la langue par défaut.
+defaultContentLanguageInSubdir= true
+
+[Languages]
+[Languages.en]
+title = &quot;Documentation for Hugo Learn Theme&quot;
+weight = 1
+languageName = &quot;English&quot;
+
+[Languages.fr]
+title = &quot;Documentation du thème Hugo Learn&quot;
+weight = 2
+languageName = &quot;Français&quot;
+</code></pre>
+
+<p>Puis, pour chaque nouvelle page, ajoutez <em>l&rsquo;id</em> de la langue du fichier.</p>
+
+<ul>
+<li>Le fichier <code>my-page.md</code> est découpé en deux fichiers :
+
+<ul>
+<li>en anglais : <code>my-page.en.md</code></li>
+<li>en français : <code>my-page.fr.md</code></li>
+</ul></li>
+<li>Le fichier <code>_index.md</code> est découpé en deux fichiers :
+
+<ul>
+<li>en anglais: <code>_index.en.md</code></li>
+<li>en français: <code>_index.fr.md</code></li>
+</ul></li>
+</ul>
+
+
+<div class="notices info" ><p>Attention, seulement les pages traduites sont affichées dans le menu. Le contenu n&rsquo;est pas remplacé par les pages de la langue par défaut.</p>
+</div>
+
+
+
+<div class="notices tip" ><p>Utilisez le paramètre du Front Matter <a href="https://gohugo.io/content-management/multilingual/#translate-your-content">slug</a> pour traduire également les URLs.</p>
+</div>
+
+
+<h2 id="surcharger-les-translation-strings">Surcharger les <em>translation strings</em></h2>
+
+<p>Les <em>Translations strings</em> sont utilisées comme valeurs par défaut dans le thème (Bouton <em>Modifier la page</em>, Element de subsitution <em>Recherche</em>, etc.). Les traductions sont disponibles en français et en anglais mais vous pouvez utiliser n&rsquo;importe quelle autre langue et surcharger avec vos propres valeurs.</p>
+
+<p>Pour surcharger ces valeurs, créer un nouveau fichier dans votre dossier i18n local <code>i18n/&lt;idlanguage&gt;.toml</code> et inspirez vous du thème <code>themes/hugo-theme-learn/i18n/en.toml</code></p>
+
+<p>D&rsquo;ailleurs, ces traductions pour servir à tout le monde, donc svp prenez le temps de <a href="https://github.com/matcornic/hugo-theme-learn/pulls">proposer une Pull Request</a> !</p>
+
+<h2 id="désactiver-le-changement-de-langue">Désactiver le changement de langue</h2>
+
+<p>Vous pouvez changer de langue directement dans le navigateur. C&rsquo;est une super fonctionnalité, mais vous avez peut-être besoin de la désactiver.</p>
+
+<p>Pour ce faire, ajouter le paramètre <code>disableLanguageSwitchingButton=true</code> dans votre <code>config.toml</code></p>
+
+<pre><code class="language-toml">[params]
+  # Quand vous utilisez un site en multi-langue, désactive le bouton de changment de langue.
+  disableLanguageSwitchingButton = true
+</code></pre>
+
+<p><img src="/en/cont/i18n/images/i18n-menu.gif" alt="I18n menu" /></p>
+
+
+<footer class=" footline" >
 	
-		<h1>Customize your own home page</h1>
-		<p>
-		  The site is working. Don't forget to customize this homepage with your own. You typically have 3 choices :
-		</p>
-		<ul>
-			<li><b>1. </b> Create an _index.md document in <b>content</b> folder and fill it with Markdown content</li>
-			<li><b>2. </b> Create an <b>index.html</b> file in the <b>static</b> folder and fill the file with HTML content</li>
-		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
-		</ul>
-	
-  
+</footer>
+
+
         
         </div> 
         
@@ -1461,8 +1609,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -1476,6 +1622,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1653,6 +1802,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1668,6 +1818,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2470,8 +2623,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/cont/icons.en/" title="Icons and logos"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/cont/" title="Conts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/cont/i18n/_index.en/" title="Multilingual and i18n" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

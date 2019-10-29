@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Documentation for Hugo Learn Theme :: Documentation for Hugo Learn Theme</title>
+    <title>Personnalisation du style :: Documentation for Hugo Learn Theme</title>
 
     
     <link href="/css/nucleus.css?1572389985" rel="stylesheet">
@@ -33,7 +33,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/">
+  <body class="" data-url="/basics/style-customization/_index.fr/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -113,7 +113,7 @@
     
     <li data-nav-id="/cont/" title="Conts" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/cont/">
@@ -431,8 +431,8 @@
   
     
     <li data-nav-id="/basics/" title="Basics" class="dd-item 
+        parent
         
-        active
         
         ">
       <a href="/basics/">
@@ -609,7 +609,7 @@
  
   
     
-      <li data-nav-id="/basics/style-customization/_index.fr/" title="Personnalisation du style" class="dd-item ">
+      <li data-nav-id="/basics/style-customization/_index.fr/" title="Personnalisation du style" class="dd-item active">
         <a href="/basics/style-customization/_index.fr/">
         Personnalisation du style
         <i class="fas fa-check read-icon"></i>
@@ -656,7 +656,7 @@
     
     <li data-nav-id="/shortcodes/" title="Shortcodes" class="dd-item 
         
-        active
+        
         
         ">
       <a href="/shortcodes/">
@@ -1403,33 +1403,290 @@
         <div id="overlay"></div>
         <div class="padding highlightable">
               
+              <div>
+                <div id="top-bar">
+                
+                  
+                  
+                  
+                  <div id="top-github-link">
+                    <a class="github-link" title='Editar esta página' href="https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/basics/style-customization/_index.fr.md" target="blank">
+                      <i class="fas fa-code-branch"></i>
+                      <span id="top-github-link-text">Editar esta página</span>
+                    </a>
+                  </div>
+                  
+                
+                
+                <div id="breadcrumbs" itemscope="" itemtype="http://data-vocabulary.org/Breadcrumb">
+                    <span id="sidebar-toggle-span">
+                        <a href="#" id="sidebar-toggle" data-sidebar-toggle="">
+                          <i class="fas fa-bars"></i>
+                        </a>
+                    </span>
+                  
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
+                  <span class="links">
+                 
+                 
+                    
+          
+          
+            
+            
+          
+          
+            
+            
+          
+          
+            <a href='/'>Documentation for Hugo Learn Theme</a> > <a href='/basics/'>Basics</a> > Personnalisation du style
+          
+         
+          
+         
+          
+        
+                 
+                  </span>
+                </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#changer-le-logo">Changer le logo</a></li>
+<li><a href="#changer-le-favicon">Changer le favicon</a></li>
+<li><a href="#theme-variant">Changer les couleurs par défaut</a>
+<ul>
+<li><a href="#variante-rouge">Variante rouge</a></li>
+<li><a href="#variante-bleue">Variante bleue</a></li>
+<li><a href="#variante-verte">Variante verte</a></li>
+<li><a href="#votre-variante">Votre variante</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+    </div>
+</div>
+
+                
+              </div>
+            </div>
+            
         <div id="head-tags">
         
         </div>
         
         <div id="body-inner">
           
+            <h1>
+              
+              Personnalisation du style
+            </h1>
+          
 
         
 
 
-<span id="sidebar-toggle-span">
-<a href="#" id="sidebar-toggle" data-sidebar-toggle=""><i class="fas fa-bars"></i> navigation</a>
-</span>
 
-           
+
+
+<p><strong>Hugo-theme-learn</strong> a été conçu pour être aussi configurable que possible en définissant plusieurs <a href="https://gohugo.io/templates/partials/">partials</a></p>
+
+<p>Dans <code>themes/hugo-theme-learn/layouts/partials/</code>, vous pourrez trouver tous les <em>partials</em> définis pour ce thème. Si vous avez besoin d&rsquo;écraser quelque chose, ne modifiez pas le code directement. A la place, <a href="https://gohugo.io/themes/customizing/">suivez cette page</a>. Vous créerez alors un nouveau <em>partial</em> dans le dossier <code>layouts/partials</code> de votre site local. Ce <em>partial</em> aura la priorité.</p>
+
+<p>Ce thème définit les <em>partials</em> suivant :</p>
+
+<ul>
+<li><em>header</em>: l&rsquo;en-tête de la page page (contient le fil d&rsquo;Ariane). <em>Pas voué à être écrasé</em></li>
+<li><em>custom-header</em>: En-tête personnalisé. Voué à être écrasé quand vous ajoutez des imports CSS. N&rsquo;oubliez pas d&rsquo;inclure la balise HTML <code>style</code> dans votre fichier</li>
+<li><em>footer</em>: le pied-de-page de la page (contains les flèches). <em>Pas voué à être écrasé</em></li>
+<li><em>custom-footer</em>:  Pied-de-page personnalisé. Voué à être écrasé quand vous ajoutez du Javascript. N&rsquo;oubliez pas d&rsquo;inclure la balise HTML <code>javascript</code> dans votre fichier</li>
+<li><em>favicon</em>: le favicon</li>
+<li><em>logo</em>: le logo, affiché un haut à gauche.</li>
+<li><em>meta</em>: les balises HTML meta, que vous pouvez écraser sans problème.</li>
+<li><em>menu</em>: Le menu à gauche. <em>Pas voué à être écrasé</em></li>
+<li><em>menu-footer</em>: Le pied-de-page du menu</li>
+<li><em>search</em>: le champ de recherche</li>
+<li><em>toc</em>: le sommaire</li>
+</ul>
+
+<h2 id="changer-le-logo">Changer le logo</h2>
+
+<p>Créez un nouveau fichier dans <code>layouts/partials/</code>, nommé <code>logo.html</code>. Puis, écrivez le code HTML voulu.
+Vous pourriez utiliser une balise HTML <code>img</code> et référencer une image créée dans le dossier <em>static</em>, voire même y coller un code SVG !</p>
+
+
+<div class="notices note" ><p>La taille du logo va s&rsquo;adapter automatiquement</p>
+</div>
+
+
+<h2 id="changer-le-favicon">Changer le favicon</h2>
+
+<p>Si votre favicon est un png, déposez votre image dans votre dossier local <code>static/images/</code> et nommez le <code>favicon.png</code></p>
+
+<p>Si vous avez besoin de changer ce comportement par défaut, créer un nouveau fichier dans <code>layouts/partials/</code> et nommez le <code>favicon.html</code>. Puis ajoutez quelque chose comme:</p>
+
+<pre><code class="language-html">&lt;link rel=&quot;shortcut icon&quot; href=&quot;/images/favicon.png&quot; type=&quot;image/x-icon&quot; /&gt;
+</code></pre>
+
+<h2 id="theme-variant">Changer les couleurs par défaut</h2>
+
+<p><strong>Hugo Learn theme</strong> vous permet de choisir nativement entre 3 schéma de couleurs, mais n&rsquo;hésitez pas à en ajouter d&rsquo;autres ! Les couleurs par défaut sont celles de <a href="https://learn.getgrav.org/">Grav Learn Theme</a>.</p>
+
+<h3 id="variante-rouge">Variante rouge</h3>
+
+<pre><code class="language-toml">[params]
+  # Modifier le schéma de couleur par défaut. Peut être &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;.
+  themeVariant = &quot;red&quot;
+</code></pre>
+
+<p><img src="/en/basics/style-customization/images/red-variant.png?width=60pc" alt="Variante rouge" /></p>
+
+<h3 id="variante-bleue">Variante bleue</h3>
+
+<pre><code class="language-toml">[params]
+  # Modifier le schéma de couleur par défaut. Peut être &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;.
+  themeVariant = &quot;blue&quot;
+</code></pre>
+
+<p><img src="/en/basics/style-customization/images/blue-variant.png?width=60pc" alt="Variante bleue" /></p>
+
+<h3 id="variante-verte">Variante verte</h3>
+
+<pre><code class="language-toml">[params]
+  # Modifier le schéma de couleur par défaut. Peut être &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;.
+  themeVariant = &quot;green&quot;
+</code></pre>
+
+<p><img src="/en/basics/style-customization/images/green-variant.png?width=60pc" alt="Variante verte" /></p>
+
+<h3 id="votre-variante">Votre variante</h3>
+
+<p>Premièrement, créez un nouveau fichier CSS dans votre dossier <code>static/css</code>, préfixé par <code>theme</code> (ex: avec le theme<em>lemien</em> <code>static/css/theme-lemien.css</code>). Copiez le contenu suivant et modifiez les couleurs dans les variables CSS.</p>
+
+<pre><code class="language-css">
+:root{
+    
+    --MAIN-TEXT-color:#323232; /* Color of text by default */
+    --MAIN-TITLES-TEXT-color: #5e5e5e; /* Color of titles h2-h3-h4-h5 */
+    --MAIN-LINK-color:#1C90F3; /* Color of links */
+    --MAIN-LINK-HOVER-color:#167ad0; /* Color of hovered links */
+    --MAIN-ANCHOR-color: #1C90F3; /* color of anchors on titles */
+
+    --MENU-HEADER-BG-color:#1C90F3; /* Background color of menu header */
+    --MENU-HEADER-BORDER-color:#33a1ff; /*Color of menu header border */ 
+
+    --MENU-SEARCH-BG-color:#167ad0; /* Search field background color (by default borders + icons) */
+    --MENU-SEARCH-BOX-color: #33a1ff; /* Override search field border color */
+    --MENU-SEARCH-BOX-ICONS-color: #a1d2fd; /* Override search field icons color */
+
+    --MENU-SECTIONS-ACTIVE-BG-color:#20272b; /* Background color of the active section and its childs */
+    --MENU-SECTIONS-BG-color:#252c31; /* Background color of other sections */
+    --MENU-SECTIONS-LINK-color: #ccc; /* Color of links in menu */
+    --MENU-SECTIONS-LINK-HOVER-color: #e6e6e6;  /* Color of links in menu, when hovered */
+    --MENU-SECTION-ACTIVE-CATEGORY-color: #777; /* Color of active category text */
+    --MENU-SECTION-ACTIVE-CATEGORY-BG-color: #fff; /* Color of background for the active category (only) */
+
+    --MENU-VISITED-color: #33a1ff; /* Color of 'page visited' icons in menu */
+    --MENU-SECTION-HR-color: #20272b; /* Color of &lt;hr&gt; separator in menu */
+    
+}
+
+body {
+    color: var(--MAIN-TEXT-color) !important;
+}
+
+textarea:focus, input[type=&quot;email&quot;]:focus, input[type=&quot;number&quot;]:focus, input[type=&quot;password&quot;]:focus, input[type=&quot;search&quot;]:focus, input[type=&quot;tel&quot;]:focus, input[type=&quot;text&quot;]:focus, input[type=&quot;url&quot;]:focus, input[type=&quot;color&quot;]:focus, input[type=&quot;date&quot;]:focus, input[type=&quot;datetime&quot;]:focus, input[type=&quot;datetime-local&quot;]:focus, input[type=&quot;month&quot;]:focus, input[type=&quot;time&quot;]:focus, input[type=&quot;week&quot;]:focus, select[multiple=multiple]:focus {
+    border-color: none;
+    box-shadow: none;
+}
+
+h2, h3, h4, h5 {
+    color: var(--MAIN-TITLES-TEXT-color) !important;
+}
+
+a {
+    color: var(--MAIN-LINK-color);
+}
+
+.anchor {
+    color: var(--MAIN-ANCHOR-color);
+}
+
+a:hover {
+    color: var(--MAIN-LINK-HOVER-color);
+}
+
+#sidebar ul li.visited &gt; a .read-icon {
+	color: var(--MENU-VISITED-color);
+}
+
+#body a.highlight:after {
+    display: block;
+    content: &quot;&quot;;
+    height: 1px;
+    width: 0%;
+    -webkit-transition: width 0.5s ease;
+    -moz-transition: width 0.5s ease;
+    -ms-transition: width 0.5s ease;
+    transition: width 0.5s ease;
+    background-color: var(--MAIN-LINK-HOVER-color);
+}
+#sidebar {
+	background-color: var(--MENU-SECTIONS-BG-color);
+}
+#sidebar #header-wrapper {
+    background: var(--MENU-HEADER-BG-color);
+    color: var(--MENU-SEARCH-BOX-color);
+    border-color: var(--MENU-HEADER-BORDER-color);
+}
+#sidebar .searchbox {
+	border-color: var(--MENU-SEARCH-BOX-color);
+    background: var(--MENU-SEARCH-BG-color);
+}
+#sidebar ul.topics &gt; li.parent, #sidebar ul.topics &gt; li.active {
+    background: var(--MENU-SECTIONS-ACTIVE-BG-color);
+}
+#sidebar .searchbox * {
+    color: var(--MENU-SEARCH-BOX-ICONS-color);
+}
+
+#sidebar a {
+    color: var(--MENU-SECTIONS-LINK-color);
+}
+
+#sidebar a:hover {
+    color: var(--MENU-SECTIONS-LINK-HOVER-color);
+}
+
+#sidebar ul li.active &gt; a {
+    background: var(--MENU-SECTION-ACTIVE-CATEGORY-BG-color);
+    color: var(--MENU-SECTION-ACTIVE-CATEGORY-color) !important;
+}
+
+#sidebar hr {
+    border-color: var(--MENU-SECTION-HR-color);
+}
+</code></pre>
+
+<p>Puis, configurez le paramètre <code>themeVariant</code> avec le nom de votre variante. C&rsquo;est tout !</p>
+
+<pre><code class="language-toml">[params]
+  # Modifier le schéma de couleur par défaut. Peut être &quot;red&quot;, &quot;blue&quot;, &quot;green&quot;.
+  themeVariant = &quot;lemien&quot;
+</code></pre>
+
+
+<footer class=" footline" >
 	
-		<h1>Customize your own home page</h1>
-		<p>
-		  The site is working. Don't forget to customize this homepage with your own. You typically have 3 choices :
-		</p>
-		<ul>
-			<li><b>1. </b> Create an _index.md document in <b>content</b> folder and fill it with Markdown content</li>
-			<li><b>2. </b> Create an <b>index.html</b> file in the <b>static</b> folder and fill the file with HTML content</li>
-		  <li><b>3. </b> Configure your server to automatically redirect home page to one your documentation page</li>
-		</ul>
-	
-  
+</footer>
+
+
         
         </div> 
         
@@ -1720,6 +1977,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1732,6 +1990,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -1861,6 +2122,7 @@
             
                 
                     
+                    
                 
                 
 
@@ -1876,6 +2138,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -2470,8 +2735,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/basics/configuration/_index.fr/" title="Configuration"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/cont/" title="Conts" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/basics/style-customization/_index.en/" title="Style customization" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>
