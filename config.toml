@@ -2,7 +2,7 @@ baseURL = "/"
 languageCode = "es-PE"
 #defaultContentLanguage = "es"
 
-title = "Hugo Learn Documentation"
+title = "Notas de Programador"
 theme = "learn"
 
 metaDataFormat = "yaml"
@@ -14,8 +14,8 @@ publishdir = "docs"
 
 [params]
   editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
-  description = "Documentation for Hugo Learn Theme"
-  author = "Mathieu Cornic"
+  description = "Aqui podrán encontrar ejemplos de códigos y otras cosas que yo mismo he investigado durante el tiempo que llevo desarrollando software."
+  author = "Hugo Roca"
   showVisitedLinks = true
   disableBreadcrumb = true
   disableNextPrev = true
