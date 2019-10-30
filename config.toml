@@ -3,7 +3,7 @@ languageCode = "es-PE"
 #defaultContentLanguage = "es"
 
 title = "Hugo Learn Documentation"
-theme = "hugo-theme-learn"
+theme = "learn"
 
 metaDataFormat = "yaml"
 
