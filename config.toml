@@ -19,6 +19,7 @@ publishdir = "docs"
   showVisitedLinks = true
   disableBreadcrumb = true
   disableNextPrev = true
+  themeVariant="blue"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
