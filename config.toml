@@ -13,13 +13,13 @@ layoutdir = "layouts"
 publishdir = "docs"
 
 [params]
-  editURL = "https://github.com/matcornic/hugo-theme-learn/edit/master/exampleSite/content/"
+  editURL = "https://github.com/HugoRoca/notasdeprogramador/tree/master/content/"
   description = "Aqui podrán encontrar ejemplos de códigos y otras cosas que yo mismo he investigado durante el tiempo que llevo desarrollando software."
   author = "Hugo Roca"
   showVisitedLinks = true
-  disableBreadcrumb = true
-  disableNextPrev = true
-  themeVariant="blue"
+  disableBreadcrumb = false
+  disableNextPrev = false
+  themeVariant="green"
 
 [outputs]
 home = [ "HTML", "RSS", "JSON"]
@@ -29,24 +29,24 @@ home = [ "HTML", "RSS", "JSON"]
 # title = "Documentation for Hugo Learn Theme"
 # weight = 1
 
-# [[Languages.es.menu.shortcuts]]
-# name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
-# identifier = "ds"
-# url = "https://github.com/matcornic/hugo-theme-learn"
-# weight = 10
+[[menu.shortcuts]]
+name = "<i class='fab fa-fw fa-github'></i> GitHub repo"
+identifier = "ds"
+url = "https://github.com/matcornic/hugo-theme-learn"
+weight = 10
 
-# [[Languages.es.menu.shortcuts]]
-# name = "<i class='fas fa-fw fa-camera'></i> Showcases"
-# url = "showcase"
-# weight = 11
+[[menu.shortcuts]]
+name = "<i class='fas fa-fw fa-camera'></i> Showcases"
+url = "showcase"
+weight = 11
 
-# [[Languages.es.menu.shortcuts]]
-# name = "<i class='fas fa-fw fa-bookmark'></i> Hugo Documentation"
-# identifier = "hugodoc"
-# url = "https://gohugo.io/"
-# weight = 20
+[[menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bookmark'></i> Hugo Documentation"
+identifier = "hugodoc"
+url = "https://gohugo.io/"
+weight = 20
 
-# [[Languages.es.menu.shortcuts]]
-# name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
-# url = "/credits"
-# weight = 30
+[[menu.shortcuts]]
+name = "<i class='fas fa-fw fa-bullhorn'></i> Credits"
+url = "/credits"
+weight = 30
