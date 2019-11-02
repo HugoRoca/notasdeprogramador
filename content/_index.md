@@ -1,5 +1,5 @@
 ---
-title: "Learn Theme for Hugo"
+#title: "Learn Theme for Hugo"
 ---
 
 # Notas de programador
