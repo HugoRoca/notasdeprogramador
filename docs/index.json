@@ -1,21 +1,28 @@
 [
 {
-	"uri": "/1.-peticiones-http/",
-	"title": "1.- Peticiones HTTP",
+	"uri": "/peticiones-http/",
+	"title": "Peticiones HTTP",
 	"tags": [],
 	"description": "",
 	"content": " Peticiones HTTP "
 },
 {
-	"uri": "/1.-peticiones-http/logica-de-reintentos/",
-	"title": "Logica de reintentos",
+	"uri": "/peticiones-http/backoff/",
+	"title": "Backoff",
 	"tags": [],
 	"description": "",
-	"content": ""
+	"content": "Para crear un backoff en javascript iniciaremos con el retorno de una promesa que contiene un setTimeout, para poder ejecutar tenemos que anteponer el await para \u0026ldquo;esperar\u0026rdquo;.\nEsto es util cuando queremos realizar reintentos, podemos iniciar con 1\u0026frasl;2 segundo, luego ir multiplicando para que el tiempo de espera sea más.\nconst backoff = (delay) =\u0026gt; new Promise(res =\u0026gt; setTimeout(res, delay)); // ejemplo de ejecución (async() =\u0026gt; { await backoff(500); // 500 =\u0026gt; milisegundos console.log(\u0026quot;test\u0026quot;); })();  "
+},
+{
+	"uri": "/peticiones-http/logica-de-reintentos/",
+	"title": "Lógica de reintentos",
+	"tags": [],
+	"description": "",
+	"content": "Las promesas son una abstracción invaluable en torno a resultados \u0026lsquo;eventuales\u0026rsquo; dentro de operaciones asincrónicas. Recientemente tuve la necesidad de poder volver a intentar una acción basada en Promesa en caso de falla. Resultó ser muy fácil implementar tal proceso usando construcciones recursivas simples.\nInicialmente solo requería la capacidad de volver a intentar la cantidad deseada de veces, antes de fallar eventualmente si aún no tenía éxito.\nEl siguiente código lo que realiza es que si una \u0026ldquo;petición http\u0026rdquo; falla, entra al catch por defecto, luego valida los retries, en caso que es este sea cero retornará el error en si.\nconst retry = (retries, fn) =\u0026gt; fn().catch(err =\u0026gt; retries \u0026gt; 1 ? retry(retries - 1, fn) : Promise.reject(err));  "
 },
 {
 	"uri": "/",
-	"title": "Learn Theme for Hugo",
+	"title": "",
 	"tags": [],
 	"description": "",
 	"content": " Notas de programador Hola a todos!\nAqui podrán encontrar ejemplos de códigos y otras cosas que yo mismo he investigado durante el tiempo que llevo desarrollando software.\nLes mostraré como funciona y hasta como implementarlo para poder entenderlo mejor.\nSi tuviera alguna sugerencia o cambio acerca de lo defenición en esta pagína, sientase libre de su modificación y esto se implementará automáticamente cuando se fusione.\n "

@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Showcase :: Notas de Programador</title>
+    <title>Backoff :: Notas de Programador</title>
 
     
     <link href="/css/nucleus.css?1572672496" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/showcase/">
+  <body class="" data-url="/peticiones-http/backoff/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -114,7 +114,7 @@
   
     
     <li data-nav-id="/peticiones-http/" title="Peticiones HTTP" class="dd-item 
-        
+        parent
         
         
         ">
@@ -140,7 +140,7 @@
  
   
     
-      <li data-nav-id="/peticiones-http/backoff/" title="Backoff" class="dd-item ">
+      <li data-nav-id="/peticiones-http/backoff/" title="Backoff" class="dd-item active">
         <a href="/peticiones-http/backoff/">
         Backoff
         <i class="fas fa-check read-icon"></i>
@@ -255,7 +255,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Editar esta página' href="https://github.com/HugoRoca/notasdeprogramador/tree/master/content//showcase.md" target="blank">
+                    <a class="github-link" title='Editar esta página' href="https://github.com/HugoRoca/notasdeprogramador/tree/master/content/Peticiones%20HTTP/backoff.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Editar esta página</span>
                     </a>
@@ -270,6 +270,8 @@
                         </a>
                     </span>
                   
+                  <span id="toc-menu"><i class="fas fa-list-alt"></i></span>
+                  
                   <span class="links">
                  
                  
@@ -280,7 +282,13 @@
             
           
           
-            <a href='/'></a> > Showcase
+            
+            
+          
+          
+            <a href='/'></a> > <a href='/peticiones-http/'>Peticiones HTTP</a> > Backoff
+          
+         
           
          
           
@@ -288,6 +296,13 @@
                  
                   </span>
                 </div>
+                
+                    <div class="progress">
+    <div class="wrapper">
+
+    </div>
+</div>
+
                 
               </div>
             </div>
@@ -300,7 +315,7 @@
           
             <h1>
               
-              Showcase
+              Backoff
             </h1>
           
 
@@ -308,15 +323,18 @@
 
 
 
+<p>Para crear un backoff en javascript iniciaremos con el retorno de una promesa que contiene un <code>setTimeout</code>, para poder ejecutar tenemos que anteponer el <code>await</code> para &ldquo;esperar&rdquo;.</p>
 
+<p>Esto es util cuando queremos realizar reintentos, podemos iniciar con <sup>1</sup>&frasl;<sub>2</sub> segundo, luego ir multiplicando para que el tiempo de espera sea más.</p>
 
-<h4 id="tat-https-ovh-github-io-tat-overview-by-ovh"><a href="https://ovh.github.io/tat/overview/">TAT</a> by OVH</h4>
+<pre><code>const backoff = (delay) =&gt; new Promise(res =&gt; setTimeout(res, delay));
 
-<p><img src="/images/showcase/tat.png?width=50pc" alt="TAT image" /></p>
-
-<h4 id="tshark-dev-https-tshark-dev-by-ross-jacobs"><a href="https://tshark.dev">Tshark.dev</a> by Ross Jacobs</h4>
-
-<p><img src="/images/showcase/tshark_dev.png?width=50pc" alt="Tshark.dev image" /></p>
+// ejemplo de ejecución
+(async() =&gt; {
+    await backoff(500); // 500 =&gt; milisegundos
+    console.log(&quot;test&quot;);
+})();
+</code></pre>
 
 
 <footer class=" footline" >
@@ -355,8 +373,6 @@
             
                 
                     
-                        
-                        
                     
                 
                 
@@ -370,6 +386,7 @@
             
             
                 
+                    
                     
                 
                 
@@ -386,6 +403,9 @@
             
             
                 
+                    
+                        
+                        
                     
                 
                 
@@ -410,8 +430,10 @@
 	 
 	 
 		
+			<a class="nav nav-prev" href="/peticiones-http/" title="Peticiones HTTP"> <i class="fa fa-chevron-left"></i></a>
 		
-			<a class="nav nav-next" href="/peticiones-http/" title="Peticiones HTTP" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+		
+			<a class="nav nav-next" href="/peticiones-http/logica-de-reintentos/" title="Lógica de reintentos" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

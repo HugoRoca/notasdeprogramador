@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Notas de Programador</title>
-    <link>/</link>
-    <description>Recent content on Notas de Programador</description>
+    <title>Peticiones HTTP on Notas de Programador</title>
+    <link>/peticiones-http/</link>
+    <description>Recent content in Peticiones HTTP on Notas de Programador</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-PE</language>
     <lastBuildDate>Thu, 31 Oct 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/peticiones-http/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -31,30 +31,6 @@ const backoff = (delay) =&amp;gt; new Promise(res =&amp;gt; setTimeout(res, dela
       <description>Las promesas son una abstracción invaluable en torno a resultados &amp;lsquo;eventuales&amp;rsquo; dentro de operaciones asincrónicas. Recientemente tuve la necesidad de poder volver a intentar una acción basada en Promesa en caso de falla. Resultó ser muy fácil implementar tal proceso usando construcciones recursivas simples.
 Inicialmente solo requería la capacidad de volver a intentar la cantidad deseada de veces, antes de fallar eventualmente si aún no tenía éxito.
 El siguiente código lo que realiza es que si una &amp;ldquo;petición http&amp;rdquo; falla, entra al catch por defecto, luego valida los retries, en caso que es este sea cero retornará el error en si.</description>
-    </item>
-    
-    <item>
-      <title>Credits</title>
-      <link>/credits/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/credits/</guid>
-      <description>Contributors Thanks to them  for making Open Source Software a better place !
-.ghContributors{ display:flex; flex-flow: wrap; align-content: flex-start }
-.ghContributors &amp;gt; div{ width: 50% ; display: inline-flex; margin-bottom: 5px; } .ghContributors &amp;gt; div label{ padding-left: 4px ; } .ghContributors &amp;gt; div span{ font-size: x-small; padding-left: 4px ; }
-  @matcornic 156 commits 
- @matalo33 39 commits 
- @coliff 17 commits 
- @lierdakil 16 commits</description>
-    </item>
-    
-    <item>
-      <title>Showcase</title>
-      <link>/showcase/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/showcase/</guid>
-      <description> TAT by OVH Tshark.dev by Ross Jacobs </description>
     </item>
     
   </channel>
