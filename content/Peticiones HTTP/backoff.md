@@ -8,7 +8,7 @@ Para crear un backoff en javascript iniciaremos con el retorno de una promesa qu
 
 Esto es util cuando queremos realizar reintentos, podemos iniciar con 1/2 segundo, luego ir multiplicando para que el tiempo de espera sea más.
 
-```
+```js
 const backoff = (delay) => new Promise(res => setTimeout(res, delay));
 
 // ejemplo de ejecución
