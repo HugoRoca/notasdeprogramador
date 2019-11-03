@@ -12,20 +12,20 @@
     <title>Lógica de reintentos :: Notas de Programador</title>
 
     
-    <link href="/css/nucleus.css?1572672539" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1572672539" rel="stylesheet">
-    <link href="/css/hybrid.css?1572672539" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1572672539" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1572672539" rel="stylesheet">
-    <link href="/css/auto-complete.css?1572672539" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1572672539" rel="stylesheet">
-    <link href="/css/theme.css?1572672539" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1572672539" rel="stylesheet">
+    <link href="/css/nucleus.css?1572756681" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1572756681" rel="stylesheet">
+    <link href="/css/hybrid.css?1572756681" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1572756681" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1572756681" rel="stylesheet">
+    <link href="/css/auto-complete.css?1572756681" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1572756681" rel="stylesheet">
+    <link href="/css/theme.css?1572756681" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1572756681" rel="stylesheet">
     
-      <link href="/css/theme-green.css?1572672539" rel="stylesheet">
+      <link href="/css/theme-green.css?1572756681" rel="stylesheet">
     
 
-    <script src="/js/jquery-3.3.1.min.js?1572672539"></script>
+    <script src="/js/jquery-3.3.1.min.js?1572756681"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -90,14 +90,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1572672539"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1572672539"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1572756681"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1572756681"></script>
 <script type="text/javascript">
     
         var baseurl = "\/";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1572672539"></script>
+<script type="text/javascript" src="/js/search.js?1572756681"></script>
 
     
   </div>
@@ -329,8 +329,20 @@
 
 <p>El siguiente código lo que realiza es que si una &ldquo;petición http&rdquo; falla, entra al catch por defecto, luego valida los <code>retries</code>, en caso que es este sea cero retornará el error en si.</p>
 
-<pre><code>const retry = (retries, fn) =&gt; fn().catch(err =&gt; retries &gt; 1 ? retry(retries - 1, fn) : Promise.reject(err));
+<pre><code class="language-js">const retry = (retries, fn) =&gt; fn().catch(err =&gt; retries &gt; 1 ? retry(retries - 1, fn) : Promise.reject(err));
 </code></pre>
+
+<p>Sin embargo, lo que eventualmente necesité fue la capacidad de &lsquo;retroceder&rsquo; y proporcionar un período de gracia creciente entre los intentos de operación. Nuevamente, fue muy fácil describir esto dentro de una Promesa como se muestra a continuación.</p>
+
+<pre><code class="language-js">const pause = (delay) =&gt; new Promise(res =&gt; setTimeout(res, delay));
+
+const backoff = (retries, fn, delay = 500) =&gt;
+  fn().catch(err =&gt; retries &gt; 1
+    ? pause(delay).then(() =&gt; backoff(retries - 1, fn, delay * 2))
+    : Promise.reject(err));
+</code></pre>
+
+<p>Como puede ver, ambas implementaciones usan una estructura recursiva con decremento &ldquo;retries&rdquo; para llegar al caso base. Lo que encuentro tan impresionante con la abstracción de Promise es lo fácil que es codificar problemas complejos como este con un código mínimo.</p>
 
 
 <footer class=" footline" >
@@ -439,19 +451,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1572672539"></script>
-    <script src="/js/perfect-scrollbar.min.js?1572672539"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1572672539"></script>
-    <script src="/js/jquery.sticky.js?1572672539"></script>
-    <script src="/js/featherlight.min.js?1572672539"></script>
-    <script src="/js/highlight.pack.js?1572672539"></script>
+    <script src="/js/clipboard.min.js?1572756681"></script>
+    <script src="/js/perfect-scrollbar.min.js?1572756681"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1572756681"></script>
+    <script src="/js/jquery.sticky.js?1572756681"></script>
+    <script src="/js/featherlight.min.js?1572756681"></script>
+    <script src="/js/highlight.pack.js?1572756681"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1572672539"></script>
-    <script src="/js/learn.js?1572672539"></script>
-    <script src="/js/hugo-learn.js?1572672539"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1572756681"></script>
+    <script src="/js/learn.js?1572756681"></script>
+    <script src="/js/hugo-learn.js?1572756681"></script>
 
-    <link href="/mermaid/mermaid.css?1572672539" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1572672539"></script>
+    <link href="/mermaid/mermaid.css?1572756681" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1572756681"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
