@@ -9,7 +9,7 @@
 
     <link rel="icon" href="/images/favicon.png" type="image/png">
 
-    <title>Backoff :: Notas de Programador</title>
+    <title>Requirements.txt :: Notas de Programador</title>
 
     
     <link href="/css/nucleus.css?1574003157" rel="stylesheet">
@@ -35,7 +35,7 @@
     </style>
     
   </head>
-  <body class="" data-url="/peticiones-http/backoff/">
+  <body class="" data-url="/python/requirements.txt/">
     <nav id="sidebar" class="showVisitedLinks">
 
 
@@ -114,7 +114,7 @@
   
     
     <li data-nav-id="/python/" title="Python" class="dd-item 
-        
+        parent
         
         
         ">
@@ -140,7 +140,7 @@
  
   
     
-      <li data-nav-id="/python/requirements.txt/" title="Requirements.txt" class="dd-item ">
+      <li data-nav-id="/python/requirements.txt/" title="Requirements.txt" class="dd-item active">
         <a href="/python/requirements.txt/">
         Requirements.txt
         <i class="fas fa-check read-icon"></i>
@@ -167,7 +167,7 @@
   
     
     <li data-nav-id="/peticiones-http/" title="Peticiones HTTP" class="dd-item 
-        parent
+        
         
         
         ">
@@ -193,7 +193,7 @@
  
   
     
-      <li data-nav-id="/peticiones-http/backoff/" title="Backoff" class="dd-item active">
+      <li data-nav-id="/peticiones-http/backoff/" title="Backoff" class="dd-item ">
         <a href="/peticiones-http/backoff/">
         Backoff
         <i class="fas fa-check read-icon"></i>
@@ -308,7 +308,7 @@
                   
                   
                   <div id="top-github-link">
-                    <a class="github-link" title='Editar esta página' href="https://github.com/HugoRoca/notasdeprogramador/tree/master/content/Peticiones%20HTTP/backoff.md" target="blank">
+                    <a class="github-link" title='Editar esta página' href="https://github.com/HugoRoca/notasdeprogramador/tree/master/content/Python/requirements.txt.md" target="blank">
                       <i class="fas fa-code-branch"></i>
                       <span id="top-github-link-text">Editar esta página</span>
                     </a>
@@ -339,7 +339,7 @@
             
           
           
-            <a href='/'></a> > <a href='/peticiones-http/'>Peticiones HTTP</a> > Backoff
+            <a href='/'></a> > <a href='/python/'>Python</a> > Requirements.txt
           
          
           
@@ -352,7 +352,17 @@
                 
                     <div class="progress">
     <div class="wrapper">
-
+<nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li>
+<ul>
+<li><a href="#cual-es-el-equivalente-de-package-json-en-python">¿Cual es el equivalente de package.json en python?</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
     </div>
 </div>
 
@@ -368,7 +378,7 @@
           
             <h1>
               
-              Backoff
+              Requirements.txt
             </h1>
           
 
@@ -376,18 +386,35 @@
 
 
 
-<p>Para crear un backoff en javascript iniciaremos con el retorno de una promesa que contiene un <code>setTimeout</code>, para poder ejecutar tenemos que anteponer el <code>await</code> para &ldquo;esperar&rdquo;.</p>
 
-<p>Esto es util cuando queremos realizar reintentos, podemos iniciar con <sup>1</sup>&frasl;<sub>2</sub> segundo, luego ir multiplicando para que el tiempo de espera sea más.</p>
 
-<pre><code class="language-js">const backoff = (delay) =&gt; new Promise(res =&gt; setTimeout(res, delay));
+<h3 id="cual-es-el-equivalente-de-package-json-en-python">¿Cual es el equivalente de package.json en python?</h3>
 
-// ejemplo de ejecución
-(async() =&gt; {
-    await backoff(500); // 500 =&gt; milisegundos
-    console.log(&quot;test&quot;);
-})();
-</code></pre>
+<p>La solución es simple, usaremos <code>freeze</code>, este pequeño y poderoso comando nos retornará los paquetes que instalamos en nuestro proyecto, hay que tener en cuenta que esto solo es para los paquetes, no es para ejecutar como se hace en nodejs con <code>npm run</code> o <code>npm start</code>.</p>
+
+<p>Ejemplos</p>
+
+<ol>
+<li><p>Generando salida para un archivo de requisitos</p>
+
+<pre><code>&gt; pip freeze
+docutils==0.11
+Jinja2==2.7.2
+MarkupSafe==0.19
+Pygments==1.6
+Sphinx==1.2.2
+</code></pre></li>
+
+<li><p>Generando archivo</p>
+
+<pre><code>&gt; pip freeze &gt; requirements.txt
+</code></pre></li>
+
+<li><p>Instalando en otro entorno</p>
+
+<pre><code>&gt; pip freeze -r requirements.txt
+</code></pre></li>
+</ol>
 
 
 <footer class=" footline" >
@@ -426,6 +453,40 @@
             
                 
                     
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+                        
+            
+            
+                
+                    
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
                         
                         
                     
@@ -453,47 +514,10 @@
             
         
                     
-            
-        
-                    
                         
             
             
                 
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-                        
-            
-            
-                
-                    
-                    
-                
-                
-
-                    
-                    
-                    
-
-                    
-            
-        
-                    
-                        
-            
-            
-                
-                    
-                        
-                        
                     
                 
                 
@@ -518,10 +542,10 @@
 	 
 	 
 		
-			<a class="nav nav-prev" href="/peticiones-http/" title="Peticiones HTTP"> <i class="fa fa-chevron-left"></i></a>
+			<a class="nav nav-prev" href="/python/" title="Python"> <i class="fa fa-chevron-left"></i></a>
 		
 		
-			<a class="nav nav-next" href="/peticiones-http/logica-de-reintentos/" title="Lógica de reintentos" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
+			<a class="nav nav-next" href="/peticiones-http/" title="Peticiones HTTP" style="margin-right: 0px;"><i class="fa fa-chevron-right"></i></a>
 		
 	
     </div>

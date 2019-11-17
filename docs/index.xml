@@ -6,10 +6,22 @@
     <description>Recent content on Notas de Programador</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>es-PE</language>
-    <lastBuildDate>Thu, 31 Oct 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 17 Nov 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Requirements.txt</title>
+      <link>/python/requirements.txt/</link>
+      <pubDate>Sun, 17 Nov 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/python/requirements.txt/</guid>
+      <description>¿Cual es el equivalente de package.json en python? La solución es simple, usaremos freeze, este pequeño y poderoso comando nos retornará los paquetes que instalamos en nuestro proyecto, hay que tener en cuenta que esto solo es para los paquetes, no es para ejecutar como se hace en nodejs con npm run o npm start.
+Ejemplos
+ Generando salida para un archivo de requisitos
+&amp;gt; pip freeze docutils==0.11 Jinja2==2.7.2 MarkupSafe==0.</description>
+    </item>
     
     <item>
       <title>Backoff</title>
