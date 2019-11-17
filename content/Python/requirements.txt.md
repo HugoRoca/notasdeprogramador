@@ -30,5 +30,5 @@ Sphinx==1.2.2
 3. Instalando en otro entorno
 
 ```
-> pip freeze -r requirements.txt
+> pip install -r requirements.txt
 ```
